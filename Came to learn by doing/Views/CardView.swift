@@ -26,6 +26,7 @@ struct CardView: View {
             
             Button(action: {
                 print(card.callToAction)
+                AudioPlayerManager.shared.playSound(forResource: "sound-chime", ofType: "mp3")
             }, label: {
                 HStack {
                     Text(card.callToAction.uppercased())
