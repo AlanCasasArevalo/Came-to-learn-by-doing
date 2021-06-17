@@ -4,7 +4,7 @@ import SwiftUI
 struct Came_to_learn_by_doingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(cards: cardData)
         }
     }
 }
