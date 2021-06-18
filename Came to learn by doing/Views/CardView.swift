@@ -3,10 +3,11 @@ import SwiftUI
 struct CardView: View {
     
     // MARK: - Properties
-    let card: CardModel
     @State var fadeIn = false
     @State var moveDownard = false
     @State var moveUpward = false
+    let card: CardModel
+    var hapticImpact = UIImpactFeedbackGenerator(style: .heavy)
 
     var body: some View {
         ZStack {
@@ -29,8 +30,8 @@ struct CardView: View {
                 .opacity(fadeIn ? 1 : 0)
             
             Button(action: {
-                print(card.callToAction)
                 AudioPlayerManager.shared.playSound(forResource: "sound-chime", ofType: "mp3")
+                hapticImpact.impactOccurred()
             }, label: {
                 HStack {
                     Text(card.callToAction.uppercased())
