@@ -17,7 +17,33 @@
 		516BC802267BAE23002755CA /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BC801267BAE23002755CA /* CardData.swift */; };
 		516BC804267BB2B4002755CA /* sound-chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 516BC803267BB2B4002755CA /* sound-chime.mp3 */; };
 		516BC806267BB4E4002755CA /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BC805267BB4E4002755CA /* AudioPlayerManager.swift */; };
+		51CB2C5B267C5A6E006523BE /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51CB2C5A267C5A6E006523BE /* Stickers.xcassets */; };
+		51CB2C5F267C5A6E006523BE /* Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 51CB2C58267C5A6C006523BE /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51CB2C5D267C5A6E006523BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 512BA218267A78AF00257518 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CB2C57267C5A6C006523BE;
+			remoteInfo = Stickers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51CB2C60267C5A6E006523BE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				51CB2C5F267C5A6E006523BE /* Stickers.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		512BA220267A78AF00257518 /* Came to learn by doing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Came to learn by doing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +58,9 @@
 		516BC801267BAE23002755CA /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		516BC803267BB2B4002755CA /* sound-chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-chime.mp3"; sourceTree = "<group>"; };
 		516BC805267BB4E4002755CA /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		51CB2C58267C5A6C006523BE /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CB2C5A267C5A6E006523BE /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		51CB2C5C267C5A6E006523BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				512BA222267A78AF00257518 /* Came to learn by doing */,
+				51CB2C59267C5A6C006523BE /* Stickers */,
 				512BA221267A78AF00257518 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				512BA220267A78AF00257518 /* Came to learn by doing.app */,
+				51CB2C58267C5A6C006523BE /* Stickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +142,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		51CB2C59267C5A6C006523BE /* Stickers */ = {
+			isa = PBXGroup;
+			children = (
+				51CB2C5A267C5A6E006523BE /* Stickers.xcassets */,
+				51CB2C5C267C5A6E006523BE /* Info.plist */,
+			);
+			path = Stickers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,15 +161,32 @@
 				512BA21C267A78AF00257518 /* Sources */,
 				512BA21D267A78AF00257518 /* Frameworks */,
 				512BA21E267A78AF00257518 /* Resources */,
+				51CB2C60267C5A6E006523BE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				51CB2C5E267C5A6E006523BE /* PBXTargetDependency */,
 			);
 			name = "Came to learn by doing";
 			productName = "Came to learn by doing";
 			productReference = 512BA220267A78AF00257518 /* Came to learn by doing.app */;
 			productType = "com.apple.product-type.application";
+		};
+		51CB2C57267C5A6C006523BE /* Stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CB2C63267C5A6E006523BE /* Build configuration list for PBXNativeTarget "Stickers" */;
+			buildPhases = (
+				51CB2C56267C5A6C006523BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stickers;
+			productName = Stickers;
+			productReference = 51CB2C58267C5A6C006523BE /* Stickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -141,6 +198,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					512BA21F267A78AF00257518 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					51CB2C57267C5A6C006523BE = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -159,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				512BA21F267A78AF00257518 /* Came to learn by doing */,
+				51CB2C57267C5A6C006523BE /* Stickers */,
 			);
 		};
 /* End PBXProject section */
@@ -172,6 +233,14 @@
 				516BC804267BB2B4002755CA /* sound-chime.mp3 in Resources */,
 				512BA22B267A78B300257518 /* Preview Assets.xcassets in Resources */,
 				512BA228267A78B300257518 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CB2C56267C5A6C006523BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CB2C5B267C5A6E006523BE /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +261,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51CB2C5E267C5A6E006523BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CB2C57267C5A6C006523BE /* Stickers */;
+			targetProxy = 51CB2C5D267C5A6E006523BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		512BA22D267A78B300257518 /* Debug */ = {
@@ -352,6 +429,34 @@
 			};
 			name = Release;
 		};
+		51CB2C61267C5A6E006523BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Stickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alancasasarevalo-gmail.Came-to-learn-by-doing.Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51CB2C62267C5A6E006523BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Stickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alancasasarevalo-gmail.Came-to-learn-by-doing.Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -369,6 +474,15 @@
 			buildConfigurations = (
 				512BA230267A78B300257518 /* Debug */,
 				512BA231267A78B300257518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CB2C63267C5A6E006523BE /* Build configuration list for PBXNativeTarget "Stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CB2C61267C5A6E006523BE /* Debug */,
+				51CB2C62267C5A6E006523BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
