@@ -4,7 +4,10 @@ struct CardView: View {
     
     // MARK: - Properties
     let card: CardModel
-    
+    @State var fadeIn = false
+    @State var moveDownard = false
+    @State var moveUpward = false
+
     var body: some View {
         ZStack {
             VStack {
@@ -19,10 +22,11 @@ struct CardView: View {
             }
             .foregroundColor(.white)
             .zIndex(1.0)
-            .offset(y: -218)
+            .offset(y: moveDownard ? -218 : -300)
             
             Image(card.imageName)
                 .zIndex(0)
+                .opacity(fadeIn ? 1 : 0)
             
             Button(action: {
                 print(card.callToAction)
@@ -45,7 +49,7 @@ struct CardView: View {
                 .clipShape(Capsule())
                 .shadow(color: Color.init("ColorShadow"), radius: 6, x: 0, y: 3)
             })
-            .offset(y: 218)
+            .offset(y: moveUpward ? 218 : 300)
         }
         .frame(width: 335, height: 545)
         .background(
@@ -53,7 +57,15 @@ struct CardView: View {
         )
         .cornerRadius(16.0)
         .shadow(radius: 8)
-        
+        .onAppear {
+            withAnimation(.linear(duration: 1)) {
+                fadeIn.toggle()
+            }
+            withAnimation(.linear(duration: 0.8)) {
+                moveDownard.toggle()
+                moveUpward.toggle()
+            }
+        }
     }
 }
 
